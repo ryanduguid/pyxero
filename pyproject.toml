@@ -45,7 +45,7 @@ dependencies = [
 ]
 
 [dependency-groups]
-# Extras used by developers *of* briefcase are pinned to specific versions to
+# Tools used by developers of PyXero are pinned to specific versions to
 # ensure environment consistency.
 pre-commit = [
     "pre-commit == 4.6.2",

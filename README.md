@@ -622,19 +622,20 @@ Non encoded:  <XERO_API_URL>/Contacts?where=first.name=="John"
 
 ## Contributing
 
-If you're going to run the PyXero test suite, in addition to the dependencies for PyXero, you need to add the following dependency to your environment:
+Use Python 3.11 or newer with an active virtual environment. From the repository root, install the pinned development tools:
 
 ```text
-mock >= 1.0
+python -m pip install --upgrade pip
+python -m pip install --group dev
 ```
 
-Mock isn't included in the formal dependencies because they aren't required for normal operation of PyXero. It's only required for testing purposes.
-
-Once you've installed these dependencies, you can run the test suite by running the following from the root directory of the project:
+Run the test suite with the current Python interpreter. Tox builds and installs PyXero and its test dependencies:
 
 ```text
-$ tox -e py
+python -m tox -e py
 ```
+
+Run `python -m tox` to include pre-commit checks and every available Python version in the test matrix. Missing interpreters are skipped.
 
 If you find any problems with PyXero, you can log them on [Github Issues](https://github.com/freakboy3742/pyxero/issues). When reporting problems, it's extremely helpful if you can provide reproduction instructions -- the sequence of calls and/or test data that can be used to reproduce the issue.
 
