@@ -29,7 +29,6 @@ class FilesManager:
         "save",
         "delete",
         "get_files",
-        "upload_file",
         "get_association",
         "get_associations",
         "make_association",
@@ -45,6 +44,17 @@ class FilesManager:
         for method_name in self.DECORATED_METHODS:
             method = getattr(self, f"_{method_name}")
             setattr(self, method_name, self._get_data(method))
+        self._upload_request = self._get_data(self._upload_file)
+
+    def upload_file(self, path=None, folderId=None, filename=None, file=None):
+        """Upload a path or a stream supplied by the caller."""
+        if path:
+            filename = os.path.basename(path)
+            with open(path, mode="rb") as stream:
+                return self._upload_request(
+                    folderId=folderId, filename=filename, file=stream
+                )
+        return self._upload_request(folderId=folderId, filename=filename, file=file)
 
     def _get_results(self, data):
         response = data["Response"]
@@ -182,18 +192,14 @@ class FilesManager:
         uri = f"{self.base_url}/{self.name}/{id}"
         return uri, {}, "delete", None, None, False, None
 
-    def _upload_file(self, path=None, folderId=None, filename=None, file=None):
+    def _upload_file(self, folderId=None, filename=None, file=None):
         if folderId is not None:
             uri = f"{self.base_url}/{self.name}/{folderId}"
         else:
             uri = f"{self.base_url}/{self.name}"
 
         files = {}
-        if path:
-            filename = os.path.basename(path)
-            files[filename] = open(path, mode="rb")
-
-        elif filename and file:
+        if filename and file:
             files[filename] = file
 
         return uri, {}, "post", None, None, False, files
