@@ -127,7 +127,8 @@ class XeroRateLimitExceeded(XeroException):
         try:
             self.errors = [payload["oauth_problem"][0]]
         except KeyError:
-            return super().__init__(response, response.text)
+            super().__init__(response, response.text)
+            return
         self.problem = self.errors[0]
         super().__init__(response, payload["oauth_problem_advice"][0])
 

@@ -99,7 +99,6 @@ extend-select = [
 "examples/receipts_importer/receipts.py" = ["EXE001", "SIM115"]
 "src/xero/auth.py" = ["BLE001", "DTZ003", "DTZ004", "DTZ005"]
 "src/xero/basemanager.py" = ["RUF012"]
-"src/xero/exceptions.py" = ["PLE0101"]
 "src/xero/filesmanager.py" = ["SIM115"]
 "src/xero/utils.py" = ["DTZ001", "DTZ004"]
 "tests/test_auth.py" = ["DTZ001", "DTZ005", "PLR1704", "S110"]
