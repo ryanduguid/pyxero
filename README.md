@@ -1,12 +1,21 @@
 # PyXero
 
-**Fork status**
+Fork status:
 
 [![Fork code quality](https://app.codacy.com/project/badge/Grade/eb168e73be5248ab9f27c125e3649c91?branch=main)](https://app.codacy.com/gh/ryanduguid/pyxero/dashboard)
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pyxero.svg)](https://pypi.python.org/pypi/pyxero) [![PyPI Version](https://img.shields.io/pypi/v/pyxero.svg)](https://pypi.python.org/pypi/pyxero) [![Maturity](https://img.shields.io/pypi/status/pyxero.svg)](https://pypi.python.org/pypi/pyxero) [![BSD License](https://img.shields.io/pypi/l/pyxero.svg)](https://github.com/freakboy3742/pyxero/blob/master/LICENSE) [![Build Status](https://github.com/freakboy3742/pyxero/workflows/CI/badge.svg?branch=main)](https://github.com/freakboy3742/pyxero/actions)
 
 PyXero is a Python API for accessing the REST API provided by the [Xero](https://developer.xero.com) accounting tool. It allows access to both Public, Private and Partner applications.
+
+On this page:
+
+* [Quickstart](#quickstart)
+* [Using the Xero API](#using-the-xero-api)
+* [Idempotent Requests](#idempotent-requests)
+* [Payroll](#payroll)
+* [Projects](#projects)
+* [Contributing](#contributing)
 
 ## Quickstart
 
