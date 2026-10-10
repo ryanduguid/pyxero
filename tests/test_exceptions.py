@@ -445,6 +445,18 @@ class ExceptionsTest(unittest.TestCase):
         except Exception as e:
             self.fail(f"Should raise a XeroRateLimitExceeded, not {e}")
 
+    def test_rate_limit_exceeded_without_oauth_problem(self):
+        response = Mock(text="Service limit reached")
+
+        for payload in ({}, {"unexpected": ["value"]}):
+            with self.subTest(payload=payload):
+                error = XeroRateLimitExceeded(response, payload)
+
+                self.assertEqual(str(error), "Service limit reached")
+                self.assertIs(error.response, response)
+                self.assertFalse(hasattr(error, "errors"))
+                self.assertFalse(hasattr(error, "problem"))
+
     @patch("requests.get")
     def test_not_available(self, r_get):
         "If Xero goes down for maintenance, an exception is raised"
