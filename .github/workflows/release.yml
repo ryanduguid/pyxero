@@ -37,7 +37,8 @@ jobs:
           path: dist
 
       - name: Install packages
-        run: pip install dist/*.whl
+        run: |
+          pip install --only-binary :all: dist/*.whl
 
       - name: Create release
         uses: ncipollo/release-action@v1.21.0
