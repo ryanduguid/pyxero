@@ -8,6 +8,15 @@
 
 PyXero is a Python API for accessing the REST API provided by the [Xero](https://developer.xero.com) accounting tool. It allows access to both Public, Private and Partner applications.
 
+On this page:
+
+- [Quickstart](#quickstart)
+- [Using the Xero API](#using-the-xero-api)
+- [Idempotent Requests](#idempotent-requests)
+- [Payroll](#payroll)
+- [Projects](#projects)
+- [Contributing](#contributing)
+
 ## Quickstart
 
 Install this library using the python package manager:
