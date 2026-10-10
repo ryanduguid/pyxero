@@ -1,6 +1,6 @@
 # PyXero
 
-**Fork status**
+Fork status:
 
 [![Fork code quality](https://app.codacy.com/project/badge/Grade/eb168e73be5248ab9f27c125e3649c91?branch=main)](https://app.codacy.com/gh/ryanduguid/pyxero/dashboard)
 
@@ -10,12 +10,12 @@ PyXero is a Python API for accessing the REST API provided by the [Xero](https:/
 
 On this page:
 
-- [Quickstart](#quickstart)
-- [Using the Xero API](#using-the-xero-api)
-- [Idempotent Requests](#idempotent-requests)
-- [Payroll](#payroll)
-- [Projects](#projects)
-- [Contributing](#contributing)
+* [Quickstart](#quickstart)
+* [Using the Xero API](#using-the-xero-api)
+* [Idempotent Requests](#idempotent-requests)
+* [Payroll](#payroll)
+* [Projects](#projects)
+* [Contributing](#contributing)
 
 ## Quickstart
 
