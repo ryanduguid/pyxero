@@ -38,7 +38,7 @@ jobs:
 
       - name: Install packages
         run: |
-          pip install --only-binary :all: --no-deps dist/*.whl
+          pip install --only-binary :all: --no-deps dist/*.whl  # NOSONAR: installs only the locally built wheel; --no-deps resolves nothing from PyPI
 
       - name: Create release
         uses: ncipollo/release-action@v1.21.0
