@@ -30,7 +30,7 @@ env:
 jobs:
   pre-commit:
     name: Pre-commit checks
-    uses: beeware/.github/.github/workflows/pre-commit-run.yml@main
+    uses: beeware/.github/.github/workflows/pre-commit-run.yml@463de9d67d0c312a3c1343e5c3ca1d37ac401f4f # main
     with:
       pre-commit-source: "--group pre-commit"
 
@@ -40,7 +40,7 @@ jobs:
       id-token: write
       contents: read
       attestations: write
-    uses: beeware/.github/.github/workflows/python-package-create.yml@main
+    uses: beeware/.github/.github/workflows/python-package-create.yml@463de9d67d0c312a3c1343e5c3ca1d37ac401f4f # main
     with:
       attest: ${{ inputs.attest-package }}
 
