@@ -41,7 +41,7 @@ jobs:
           pip install --only-binary :all: --no-deps dist/*.whl  # NOSONAR: installs only the locally built wheel; --no-deps resolves nothing from PyPI
 
       - name: Create release
-        uses: ncipollo/release-action@v1.21.0
+        uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
           name: v${{ env.VERSION }}
           draft: true
@@ -49,6 +49,6 @@ jobs:
           artifactErrorsFailBuild: true
 
       - name: Publish release to Test PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
