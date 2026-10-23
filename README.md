@@ -1,10 +1,14 @@
 # PyXero
 
+<div align="center">
+
 Fork status:
 
 [![Fork code quality](https://img.shields.io/codacy/grade/eb168e73be5248ab9f27c125e3649c91/main?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/pyxero/dashboard)
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/pyxero.svg?style=flat&labelColor=000000&color=66023C)](https://pypi.python.org/pypi/pyxero) [![PyPI Version](https://img.shields.io/pypi/v/pyxero.svg?style=flat&labelColor=000000&color=66023C)](https://pypi.python.org/pypi/pyxero) [![Maturity](https://img.shields.io/pypi/status/pyxero.svg?style=flat&labelColor=000000&color=66023C)](https://pypi.python.org/pypi/pyxero) [![BSD License](https://img.shields.io/pypi/l/pyxero.svg?style=flat&labelColor=000000&color=66023C)](https://github.com/freakboy3742/pyxero/blob/master/LICENSE) [![Build Status](https://img.shields.io/github/actions/workflow/status/freakboy3742/pyxero/ci.yml?branch=main&event=push&label=CI&style=flat&labelColor=000000)](https://github.com/freakboy3742/pyxero/actions/workflows/ci.yml)
+
+</div>
 
 PyXero is a Python API for accessing the REST API provided by the [Xero](https://developer.xero.com) accounting tool. It allows access to both Public, Private and Partner applications.
 
